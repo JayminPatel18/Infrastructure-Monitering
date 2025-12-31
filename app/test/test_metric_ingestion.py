@@ -1,5 +1,5 @@
 # 7. Create Test Script for Metrics
-from app.metrics_service import ingest_metric
+from app.services.metrics_service import ingest_metric
 
 # CPU Metrics
 ingest_metric("CPU", 45)

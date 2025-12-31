@@ -1,8 +1,8 @@
-# 9 Create alert Processor -> This processes latest metrics
+# 10 Create alert Processor -> This processes latest metrics
 
 from app.database import SessionLocal
 from app.models import SystemMetric
-from app.alert_service import generate_alert
+from app.services.alert_service import generate_alert
 from sqlalchemy import desc
 from app.logger import logger
 

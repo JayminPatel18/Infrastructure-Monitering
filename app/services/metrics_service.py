@@ -5,6 +5,7 @@
 from datetime import datetime
 from app.database import SessionLocal
 from app.models import SystemMetric
+from sqlalchemy.orm import Session
 
 import pytz
 
@@ -44,7 +45,7 @@ def calculate_status(metric_type, value):
     return "UNKNOWN"
 
 # Metric Ingestion Logic
-def ingest_metric(metric_type, value):
+def ingest_metric(metric_type, value, db: Session):
     status = calculate_status(metric_type, value)
 
     metric = SystemMetric(

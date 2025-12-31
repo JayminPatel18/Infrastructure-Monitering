@@ -10,7 +10,7 @@ from app.database import SessionLocal
 from app.models import Alerts, SystemMetric
 from sqlalchemy import desc
 
-from app.incident_service import create_incident_from_alert
+from app.services.incident_service import create_incident_from_alert
 from app.logger import logger
 
 db = SessionLocal()
